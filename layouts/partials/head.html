@@ -1,0 +1,10 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="{{ .Site.Author.name }}">
+<link rel="canonical" href="{{ .Permalink }}" />
+
+
+{{ $options := (dict "targetPath" "site.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "scss/site.scss" | resources.ToCSS $options | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
