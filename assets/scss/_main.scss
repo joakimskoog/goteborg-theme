@@ -1,39 +1,64 @@
-body {
-  margin: 0;
+
+
+* {
+  box-sizing: border-box;
   padding: 0;
-  font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",  Helvetica, Arial, sans-serif;
-  font-display: auto;
-  font-size: 1rem;
-  line-height: 1.50;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -webkit-overflow-scrolling: touch;
-  -webkit-text-size-adjust: 100%;
-
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-
-  &.light-theme {
-    background-color: $light-theme-background;
-    color: $light-theme-color;
-  }
-
-  &.dark-theme {
-    background-color: $dark-theme-background;
-    color: $dark-theme-color;
-  }
-
+  margin: 0;
 }
 
 
+body {
+  background:#fff;
+  color: #161209;
+  font-family:'Lora',serif;
+  font-weight:normal;
+  font-style:normal;
+  line-height:1.5;
 
-.social-icon {
-  width: 24px;
-  height: 24px;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
+  &.dark-theme {
+    background:$dark-theme-background;
+    color:$dark-theme-color;
+  }
+}
+
+.wrapper {
+  display:flex;
+  flex-direction: column;
+  min-height:100vh;
+
+  > * {
+    padding:1rem;
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family:'Source Sans Pro', sans-serif;
+  font-weight:700;
+  font-style:normal;
+  text-rendering: optimizeLegibility;
+  margin-top:0.2rem;
+  margin-bottom:0.5rem;
+  line-height:1.4;
+}
+
+a {
+  text-decoration: none;
+  color:#000;
+
+  &:hover {
+    color:$light-theme-color-highlight;
+    transition: color .2s ease,border-color .2s ease,background .2s ease,opacity .2s ease;
+  }
+
+  .dark-theme & {
+    color:$dark-theme-color;
+
+    &:hover {
+      color:$dark-theme-color-highlight;
+    }
+  }
 }

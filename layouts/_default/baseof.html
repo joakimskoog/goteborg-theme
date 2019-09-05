@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		{{ partial "head.html" . }}
-	</head>
-    <body class="light-theme">
-     <div class="container">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body>
+    <div class="wrapper">
         {{ partial "header.html" . }}
+        {{ block "main" . }}{{ end }}
+        {{ partial "footer.html" . }}
+    </div>
 
-        <div class="content">
-            {{ block "main" . }}{{ end }}
-        </div>
-        {{ block "footer" . }}
-            {{ partial "footer.html" . }}
-        {{ end }}
+    {{ $app := resources.Get "js/app.js" }}
+    {{ $secureJS := slice $app  | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+    <script type="text/javascript" src="{{ $secureJS.RelPermalink }}"
+        integrity="{{ $secureJS.Data.Integrity }}"></script>
+</body>
 
-     </div>
-    </body>
 </html>

@@ -1,10 +1,23 @@
 {{ define "main" }}
-    <main aria-role="main">
-        <div>
-            <h1>{{ .Site.Title }}</h1>
-            {{- with .Site.Params.homeSubtitle }}
-                <p>{{.}}</p>
-            {{- end }}
-        </div>
-    </main>
+<main id="content" aria-role="main">
+    <section class="posts">
+        {{ range (where .Pages "Type" "in" site.Params.mainSections).ByPublishDate.Reverse }}
+        <article class="post">
+            <div class="post-container">
+                <section class="post-header">
+                    <h2 class="post-title">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h2>
+                    <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
+                        {{ .Date.Format "2 Jan 2006"}}
+                    </time>
+                </section>
+                <section class="post-description">
+                    <p>{{ .Summary }}</p>
+                </section>
+            </div>
+        </article>
+        {{ end }}
+    </section>
+</main>
 {{ end }}
