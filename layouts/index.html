@@ -1,4 +1,7 @@
 {{ define "main" }}
+
+{{ partial "header.html" . }}
+
 <main id="content" aria-role="main">
     <section class="posts">
         {{ range (where .Pages "Type" "in" site.Params.mainSections).ByPublishDate.Reverse }}
