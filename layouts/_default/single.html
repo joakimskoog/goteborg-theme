@@ -3,19 +3,29 @@
 
 
 
-<header class="post-header">
-    <section class="post-header-content">
+<header class="post-header-content">
+    <section class="header-content">
         <h1 class="post-title">
             <span>{{ .Title }}</span>
         </h1>
-        <hr class="hr-text" data-content="9 September 2019" />
+        <div class="post-meta">
+            <div class="reading-time">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <span>{{ .ReadingTime }} {{ "minute" | pluralize }}</span>
+            </div>
+            <div class="publish-date">
+                <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                <span>{{ .PublishDate.Format "2 Jan 2006" }}</span>
+            </div>
+        </div>
     </section>
 </header>
 
-
-
 <main id="content" class="" role="main">
-    {{ .Content }}
+    <article class="post">
+            {{ .Content }}
+    </article>
+   
 </main>
 
 {{ end }}

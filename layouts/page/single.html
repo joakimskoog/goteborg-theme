@@ -2,7 +2,8 @@
 
 {{ partial "header.html" . }}
 
-{{ .Content }}
-
+<main id="content" aria-role="main">
+        {{ .Content }}
+</main>
 
 {{ end }}
