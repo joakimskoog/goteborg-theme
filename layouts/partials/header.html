@@ -1,10 +1,10 @@
 <header class="site-header">
     <section class="header-content">
         <h1 class="author-title">
-            <span>Joakim Skoog</span>
+            <span>{{ .Site.Author.name }}</span>
         </h1>
         <h2 class="author-description">
-            <span>Senior Software Developer @ Nelly.com</span>
+            <span>{{ .Site.Author.description }}</span>
         </h2>
         <div class="header-content-social-icons">
             {{ range .Site.Params.social }}
