@@ -22,14 +22,20 @@
     <article class="post-content">
         {{ .Content }}
 
+
+        {{$tagsLength := len .Params.tags}}
+        <p>{{$tagsLength}}</p>
+        {{if (gt $tagsLength 0)}}
         <section class="tags">
             <strong>Tags:</strong>
-            {{ range .Params.tags }}
-                <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a>,
-            {{ end }}
-
+            {{ range $index, $tag := .Params.tags }}
+                <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a>{{ if lt $index (sub $tagsLength 1) }},{{ end }}
+            {{ end }}     
         </section>
+        {{end}}
+
     </article>
 </main>
+
 
 {{ end }}
