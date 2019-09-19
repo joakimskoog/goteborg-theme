@@ -8,7 +8,7 @@
 
 
 body {
-  background:#fff;
+  background:$light-theme-background;
   color: #161209;
   font-family:'Lora',serif;
   font-weight:normal;
@@ -33,16 +33,6 @@ body {
 
 main {
   flex-grow: 1;
-}
-
-h1,h2,h3,h4,h5,h6 {
-  font-family:'Source Sans Pro', sans-serif;
-  font-weight:700;
-  font-style:normal;
-  text-rendering: optimizeLegibility;
-  margin-top:0.2rem;
-  margin-bottom:0.5rem;
-  line-height:1.4;
 }
 
 a {

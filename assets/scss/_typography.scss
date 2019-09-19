@@ -1,0 +1,19 @@
+h1,h2,h3,h4,h5,h6 {
+    font-family:'Source Sans Pro', sans-serif;
+    font-weight:700;
+    font-style:normal;
+    text-rendering: optimizeLegibility;
+    margin-top:0.2rem;
+    margin-bottom:0.5rem;
+    line-height:1.4;
+}
+
+@each $header, $map in $headers {
+    #{$header} {
+        font-size:map-get($map, font-size-default);
+
+        @media screen and(min-width:$screen-medium) {
+            font-size:map-get($map, font-size-large);
+        }
+    }
+}

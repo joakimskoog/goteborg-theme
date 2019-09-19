@@ -1,15 +1,19 @@
 @charset "UTF-8";
 
+
+/* Colors */
+$white: #fff;
+
+
 /* Light theme */
-$light-theme-background: #fff;
+$light-theme-background: $white;
 $light-theme-color: #222;
 $light-theme-color-highlight: #2d96bd;
 
 /* Dark theme */
 $dark-theme-background: #292a2d;
 $dark-theme-color: #a9a9b3;
-$dark-theme-color-highlight: #fff;
-
+$dark-theme-color-highlight: $white;
 
 /* Screen sizes used for breakpoints in media queries */
 $screen-small: 576px;
@@ -17,4 +21,22 @@ $screen-medium: 768px;
 $screen-large: 992px;
 $screen-xl: 1200px;
 
-$border-size: 1rem;
+/* Typography */
+$font-size-base: 1rem;
+
+$h1-font-size:$font-size-base*1.875;
+$h1-font-size-large:$font-size-base*4.625;
+
+$h2-font-size:$font-size-base*1.75;
+$h2-font-size-large:$font-size-base*2.25;
+
+$headers:(
+    h1: (
+        font-size-default:$h1-font-size,
+        font-size-large:$h1-font-size-large
+    ),
+    h2: (
+        font-size-default:$h2-font-size,
+        font-size-large:$h2-font-size-large
+    ),
+);
