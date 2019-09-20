@@ -22,7 +22,6 @@
     <article class="post-content">
         {{ .Content }}
 
-
         {{$tagsLength := len .Params.tags}}
         <p>{{$tagsLength}}</p>
         {{if (gt $tagsLength 0)}}
