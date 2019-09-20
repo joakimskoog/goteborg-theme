@@ -3,6 +3,17 @@
 
 /* Colors */
 $white: #fff;
+$black: #000;
+
+
+/* Common padding, margins, borders and more */
+
+$margin-top-base:0;
+$margin-bottom-base:1rem;
+
+$border-radius: .25rem;
+
+$line-height-base: 1.5;
 
 
 /* Light theme */
@@ -23,12 +34,17 @@ $screen-xl: 1200px;
 
 /* Typography */
 $font-size-base: 1rem;
+$font-weight-normal: 500;
+$font-weight-bold: 600;
+
 
 $h1-font-size:$font-size-base*1.875;
 $h1-font-size-large:$font-size-base*4.625;
 
 $h2-font-size:$font-size-base*1.75;
 $h2-font-size-large:$font-size-base*2.25;
+
+$header-margin-bottom:$margin-bottom-base/2;
 
 $headers:(
     h1: (
@@ -40,3 +56,20 @@ $headers:(
         font-size-large:$h2-font-size-large
     ),
 );
+
+$paragraph-margin-top: $margin-top-base;
+$paragraph-margin-bottom: $margin-bottom-base;
+
+/* Lists */
+$list-margin-top: $margin-top-base;
+$list-margin-bottom:$margin-bottom-base;
+$list-padding-left: 1.2rem;
+
+
+
+/* Buttons */
+$button-line-height: $line-height-base;
+$button-padding-x:1.5rem;
+$button-padding-y: .375rem;
+$button-border-width: .1875rem;
+$button-font-weight:$font-weight-bold;
