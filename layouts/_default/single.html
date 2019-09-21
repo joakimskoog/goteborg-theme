@@ -23,7 +23,6 @@
         {{ .Content }}
 
         {{$tagsLength := len .Params.tags}}
-        <p>{{$tagsLength}}</p>
         {{if (gt $tagsLength 0)}}
         <section class="tags">
             <strong>Tags:</strong>

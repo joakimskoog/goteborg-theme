@@ -23,8 +23,8 @@ body {
   flex-direction: column;
   min-height:100vh;
 
-  > * {
-    padding:1rem;
+  > *{//:not(.no-padding){
+      padding:1rem;
   }
 }
 
