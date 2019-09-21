@@ -9,7 +9,7 @@
             <div class="post-container">
                 <section class="post-header">
                     <h2 class="post-title">
-                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        <a href="{{ .Permalink }}" class="clean-link">{{ .Title }}</a>
                     </h2>
                     <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
                         {{ .Date.Format "2 Jan 2006"}}

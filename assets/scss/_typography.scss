@@ -28,3 +28,37 @@ ol, ul {
     margin-bottom:$list-margin-bottom;
     padding-left:$list-padding-left;
 }
+
+hr {
+    border:1px solid $black;
+    margin-bottom:$margin-bottom-base;
+}
+
+a {
+    color:$link-color;
+    background: $link-background;
+    text-decoration: $link-decoration;
+    border-bottom:$link-border-bottom;
+
+    &:hover {
+        color:$link-color-hover;
+        background:$link-background-hover;
+    }
+}
+
+.link-clean {
+    border-bottom:none;
+}
+
+.link-no-hover {
+    &:hover {
+        color:$link-color;
+        background:$link-background;
+    } 
+}
+
+h1,h2,h3,h4,h5,h6 {
+    a {
+        @extend .link-clean;
+    }
+}

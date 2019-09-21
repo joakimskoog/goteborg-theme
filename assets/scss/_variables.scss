@@ -5,6 +5,7 @@
 $white: #fff;
 $black: #000;
 
+$primary-color: #161209;
 
 /* Common padding, margins, borders and more */
 
@@ -31,6 +32,15 @@ $screen-small: 576px;
 $screen-medium: 768px;
 $screen-large: 992px;
 $screen-xl: 1200px;
+
+/* Links */
+$link-color: $primary-color;
+$link-background: transparent;
+$link-color-hover: $white;
+$link-background-hover:$black;
+$link-decoration: none;
+$link-border-bottom: $black 1px dashed;
+
 
 /* Typography */
 $font-size-base: 1rem;
@@ -64,8 +74,6 @@ $paragraph-margin-bottom: $margin-bottom-base;
 $list-margin-top: $margin-top-base;
 $list-margin-bottom:$margin-bottom-base;
 $list-padding-left: 1.2rem;
-
-
 
 /* Buttons */
 $button-line-height: $line-height-base;
